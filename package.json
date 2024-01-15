@@ -1,0 +1,22 @@
+{
+  "name": "twitturin-cicd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "test:e2e": "lerna run test:e2e --scope=@twitturin-cicd/client",
+    "start:api": "lerna run start:test --scope=@twitturin-cicd/api",
+    "start:client": "lerna run dev --scope=@twitturin-cicd/client"
+  },
+  "author": "Anvar Sheryatullayev",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.0.2"
+  }
+}
